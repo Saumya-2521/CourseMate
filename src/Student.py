@@ -1,4 +1,4 @@
-# from Course import Course
+from Course import Course
 
 class Student:
     def __init__(self, name, email):
