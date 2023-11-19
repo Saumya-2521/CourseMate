@@ -1,1 +1,4 @@
 ./vscode
+
+# Ignore pycache
+__pycache__/
