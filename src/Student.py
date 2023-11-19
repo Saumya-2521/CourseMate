@@ -1,4 +1,3 @@
-from flask import Flask
 # from Course import Course
 
 class Student:
