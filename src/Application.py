@@ -1,4 +1,4 @@
-import src.Student from Student
+from Student import Student
 import pickle
 
 class Application:
@@ -10,6 +10,7 @@ class Application:
 	# @return the final list of ranked students for a given student
 	def getRankedList(self, student):
 		# TODO
+		pass
 
 	# Creates a list of students from a file
 	# @return a list of students
