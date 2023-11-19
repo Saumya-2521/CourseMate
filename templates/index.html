@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Test</title>
+  </head>
+  <body>
+    <h1>Press the Button!</h1>
+    <button id="myButton">Call Endpoint</button>
+
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          fetch("/getRankedList", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+          .then((response) => response.json())
+          .then((json) => console.log(json))
+        });
+    </script>
+  </body>
+</html>
