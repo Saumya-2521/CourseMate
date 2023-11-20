@@ -3,9 +3,40 @@
   <head>
     <title>Home</title>
     <script src="{{ url_for('static', filename='scripts/home.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
   </head>
+
   <body>
-    <h1>Home Page Stub</h1>
-    <button id="getStudentsButton">Get Students</button>
+    <div id="courses">
+      <h2>Your Courses</h2>
+      <input type="text" id="deptCode" placeholder="Department Code (e.g. CPSC)">
+      <input type="text" id="courseCode" placeholder="Course Code (e.g. 310)">
+      <input type="text" id="sectionCode" placeholder="Section Code (e.g. 101)">
+      <button id="addCourseBtn">Add Course</button>
+      <div id="courseList">
+        <table id="courseTable">
+          <tr>
+            <th>Department Code</th>
+            <th>Course Code</th>
+            <th>Section Code</th>
+            <th>Remove Course</th>
+          </tr>
+        </table>
+      </div>
+      <button id="getStudentsButton">Get Students</button>
+    </div>
+  
+    <div>
+
+    </div>
+    <div id="students">
+      <h2>Students</h2>
+      <div id="studentList">
+        <!-- Student information will be listed here -->
+        <ul id="studentOrderedList"></ul>
+      </div>
+      <!-- Student information will be listed here -->
+      <ul id="studentOrderedList"></ul>
+    </div>
   </body>
 </html>
