@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Sign Up</title>
-  </head>
-  <body>
-    <h1>Sign Up Page Stub</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-image: url('../static/scripts/images/background.png'); /* Replace with the path to your background image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 400px; /* Make the logo bigger */
+      margin-bottom: -60px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: row; /* Arrange items horizontally */
+      align-items: center;
+      justify-content: space-between; /* Add space between label and input */
+      margin-bottom: 10px;
+    }
+
+    .input-label {
+      text-align: left;
+      color: black; /* Black text color for the labels */
+      margin-right: 10px; /* Add space between label and input */
+      flex-shrink: 0; /* Don't allow the label to shrink */
+      text-align: right;
+    }
+
+    .custom-input {
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      background-color: white; /* White background */
+      fill: #FFF;
+      color: black; /* Black text color */
+      /* Add any additional styles as needed */
+      width: 250px;
+    }
+
+    .action-button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(228, 170, 158, 0.80); /* Pink color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <img src="../static/scripts/images/courseMate_icon.png" alt="Company Logo" class="logo"> <!-- Replace with the path to your company logo -->
+
+    <div class="input-group">
+      <label for="email" class="input-label">Email</label>
+      <input type="text" id="email" class="custom-input" placeholder="">
+    </div>
+
+    <div class="input-group">
+      <label for="password" class="input-label">Password</label>
+      <input type="password" id="password" class="custom-input" placeholder="">
+    </div>
+
+    <div class="input-group">
+      <label for="confirm-password" class="input-label">Confirm Password</label>
+      <input type="password" id="confirm-password" class="custom-input" placeholder="">
+    </div>
     <a href="/home">
-      <button>Create Account</button>
+    <button class="action-button">Sign Up Account</button>
     </a>
-  </body>
+  </div>
+</body>
 </html>

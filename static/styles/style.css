@@ -1,0 +1,53 @@
+body {
+    background-image: url('/static/images/background.png');
+    /* background-size: 1000px; */
+
+    margin: 0; 
+    padding: 0;
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+.mainlogo {
+    margin-top: 400px;
+    margin-left: 500px;
+    width: 500px;
+    height: 500px;
+    top: 100%;
+    left: 50%;
+
+    margin: 0; 
+    padding: 0;
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+.button {
+    background: rgba(228, 170, 158, 0.80);;
+    color: rgba(255, 255, 255, 0.582);
+    display: block;
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    line-height: 60px;
+    font-size: 20px;
+    transition: 1s;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button:hover {
+    background: rgb(255, 169, 152);
+    color: white;
+}
+
+.container_bottom {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translateX(275px);
+}
