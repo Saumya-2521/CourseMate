@@ -1,4 +1,4 @@
-from course import Course
+from src.course import Course
 
 class Student:
     def __init__(self, name, email, courses):

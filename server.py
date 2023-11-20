@@ -1,4 +1,7 @@
 from flask import Flask, render_template
+from src.Student import Student
+from src.course import Course
+from src.Application import Application
 
 app = Flask(__name__)
 
@@ -11,7 +14,14 @@ def getRankedList():
     # Perform any action you want when this endpoint is called
 	# Return python dictionary as specified in Notes.md
     # TODO: Implement this
-	return {'hello': 'world'}
+	mainStud = Student("Max 2", "lavamarmax@gmailc.om", [
+		Course("CPSC", "310", "101"),
+		Course("CPSC", "320", "102"),
+		Course("CPSC", "314", "103"),
+		Course("PHIL", "321", "100")
+	])
+	application = Application()
+	return application.getRankedList(mainStud)
 
 @app.route('/signup/')
 def signup():
