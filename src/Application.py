@@ -26,8 +26,8 @@ class Application:
 
 		# Make the actual dictionary of students, according to notes.md   
 		rankedList = []
+		keysNamesOfStudents = list(sortedStudentPointsDict.keys())
 		for i in range(len(sortedStudentPointsDict)):
-			keysNamesOfStudents = list(sortedStudentPointsDict.keys())
 			
 			for oneStudent in self.studentList:
 				if oneStudent.name == keysNamesOfStudents[i]:
