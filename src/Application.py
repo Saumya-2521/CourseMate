@@ -1,4 +1,4 @@
-from Student import Student
+from src.Student import Student
 import pickle
 
 class Application:
@@ -14,7 +14,7 @@ class Application:
 		points = []
 		# Get points for every student
 		for i in range(len(self.studentList)):
-			points[i] = self.studentList[i].getOtherStudentPoints(student)
+			points.append(self.studentList[i].getOtherStudentPoints(student))
 
 		# Make a dictinary of points (as value) and student names as key
 		studentPointsDict = {}
@@ -27,7 +27,7 @@ class Application:
 		# Make the actual dictionary of students, according to notes.md   
 		rankedList = []
 		for i in range(len(sortedStudentPointsDict)):
-			keysNamesOfStudents = sortedStudentPointsDict.keys()
+			keysNamesOfStudents = list(sortedStudentPointsDict.keys())
 			
 			for oneStudent in self.studentList:
 				if oneStudent.name == keysNamesOfStudents[i]:
@@ -40,7 +40,7 @@ class Application:
 
 	
  	# @returns the list of courses that the student has in common with the other student
-	def selectCourseList(student, otherStudent):
+	def selectCourseList(self, student, otherStudent):
 		# Make a list of courses that the student and otherStudent have in common
 		# Return that list
 		sameSectionList = []
