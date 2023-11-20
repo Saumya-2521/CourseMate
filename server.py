@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from src.Student import Student
 from src.course import Course
 from src.Application import Application
+import os
+
 
 app = Flask(__name__)
 
@@ -30,6 +32,11 @@ def signup():
 @app.route('/home')
 def home():
 	return render_template('home.html')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static/images'),
+        'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 if __name__ == '__main__':
     app.run(debug=True) # TODO: Set debug=False before deployment
