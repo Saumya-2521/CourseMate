@@ -50,8 +50,8 @@ function populateTable(json) {
     infoButton.addEventListener("mouseout", function() {
       email.classList.add("hidden");
     });
-    topRowDiv.appendChild(infoButton);
     topRowDiv.appendChild(email);
+    topRowDiv.appendChild(infoButton);
     innerDiv.appendChild(topRowDiv);
 
 
@@ -90,6 +90,8 @@ function addCourse() {
   deleteCourseButton.addEventListener("click", removeCourse);
 
   let table = document.getElementById("courseTable");
+  // Unhide table
+  table.classList.remove("hidden");
 
   // Add the new course
   let newRow = table.insertRow(-1);

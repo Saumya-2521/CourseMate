@@ -8,13 +8,17 @@
 
   <body>
     <div id="courses">
-      <h2>Your Courses</h2>
-      <input type="text" id="deptCode" placeholder="Department Code (e.g. CPSC)">
-      <input type="text" id="courseCode" placeholder="Course Code (e.g. 310)">
-      <input type="text" id="sectionCode" placeholder="Section Code (e.g. 101)">
-      <button id="addCourseBtn">Add Course</button>
+      <div id="leftCourses">
+        <h2>Add Courses</h2>
+        <div id="textInputs">
+          <input type="text" id="deptCode" placeholder="Department Code (e.g. CPSC)">
+          <input type="text" id="courseCode" placeholder="Course Code (e.g. 310)">
+          <input type="text" id="sectionCode" placeholder="Section Code (e.g. 101)">
+        </div>
+        <button id="addCourseBtn">Add Course</button>
+      </div>
       <div id="courseList">
-        <table id="courseTable">
+        <table id="courseTable" class="hidden">
           <tr>
             <th>Department Code</th>
             <th>Course Code</th>
@@ -23,14 +27,10 @@
           </tr>
         </table>
       </div>
-      <button id="getStudentsButton">Get Students</button>
-    </div>
-  
-    <div>
-
+      <button id="getStudentsButton">Find course-mates!</button>
     </div>
     <div id="students">
-      <h2>Students</h2>
+      <h2>Course Mates</h2>
       <div id="studentList">
         <!-- Student information will be listed here -->
         <ul id="studentOrderedList"></ul>
