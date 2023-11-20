@@ -64,6 +64,11 @@ studentList = [
 
 ]
 
+#HOW TO RUN THE SAMPLE WEBSITE VV
+#python3 server.py
+
+
+
 # # Save to file
 # with open(pickleFile, 'wb') as f:
 # 	pickle.dump(studentList, f)
