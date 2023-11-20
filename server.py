@@ -15,7 +15,7 @@ def getRankedList():
 	# Return python dictionary as specified in Notes.md
     # TODO: Implement this
 	mainStud = Student("Max 2", "lavamarmax@gmailc.om", [
-		Course("CPSC", "310", "101"),
+		Course("CPSC", "310", "100"),
 		Course("CPSC", "320", "102"),
 		Course("CPSC", "314", "103"),
 		Course("PHIL", "321", "100")
