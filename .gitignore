@@ -2,3 +2,6 @@
 
 # Ignore pycache
 __pycache__/
+
+# Generated files
+studentList.pickle

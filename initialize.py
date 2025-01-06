@@ -16,7 +16,7 @@ studentList = [
 		Course("CPSC", "302", "101"),
 		Course("MATH", "316", "102"),
 		Course("MATH", "317", "105"),
-		Course("ENGL", "110", "100")	
+		Course("ENGL", "110", "100")
 	]),
 
 	Student("Navid", "NavidTheGOAT@Gmail.com", [
@@ -44,13 +44,13 @@ studentList = [
 	]),
 
 	Student("JaMarcus", "JaMarGOAT@Outlook.com", [
-		Course("CRWR", "200", "101"), 
+		Course("CRWR", "200", "101"),
 		Course("CRWR", "203", "100"),
 		Course("CPSC", "103", "102")
 	]),
 
 	Student("Tragedeigh", "TragedeighLikesStarbz@Outlook.com", [
-		Course("MATH", "221", "102"), 
+		Course("MATH", "221", "102"),
 		Course("MATH", "220", "102"),
 		Course("MATH", "215", "100"),
 		Course("CPSC", "100", "101")
@@ -64,18 +64,13 @@ studentList = [
 
 ]
 
-#HOW TO RUN THE SAMPLE WEBSITE VV
-#python3 server.py
+if __name__ == "__main__":
+	# Initialize the pickle File with the students above
+	with open(pickleFile, 'wb') as f:
+		pickle.dump(studentList, f)
 
-
-
-# # Save to file
-# with open(pickleFile, 'wb') as f:
-# 	pickle.dump(studentList, f)
-
-# Load from file
-
-with open(pickleFile, 'rb') as f:
-	studentList = pickle.load(f)
-	print("Loaded from file: ")
-	print(studentList)
+	# # Load from file
+	# with open(pickleFile, 'rb') as f:
+	# 	studentList = pickle.load(f)
+	# 	print("Loaded from file: ")
+	# 	print(studentList)
